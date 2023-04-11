@@ -22,7 +22,7 @@ const Navigation = () => {
         className="text-lg font-semibold"
       >
         <Link href={`/`}>
-          <h2 className="text-2xl">Logo Here</h2>
+          <h2 className="text-2xl">Code Blog</h2>
         </Link>
       </div>
       <div
