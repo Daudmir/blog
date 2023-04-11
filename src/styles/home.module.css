@@ -5,3 +5,12 @@
 .main img {
     width: 100%;
 }
+
+.post img {
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.post p {
+    font-size: 17px;
+}
