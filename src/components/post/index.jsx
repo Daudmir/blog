@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import style from '../../styles/home.module.css'
 
 function Posts() {
   const [postData, setPostData] = useState([]);
@@ -16,16 +17,12 @@ function Posts() {
 
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-black">
-      <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-1 xl:grid-cols-1">
         {postData.map((post) => (
           <div key={post.id} className=" bg-gray-100 border border-gray-300 rounded-lg shadow-md">
             <Link href={`/posts/${post.slug}`}>
-                <div className="h-40 rounded-t-lg overflow-hidden">
-                  <img src={post.featured_media_url} alt={post.title.rendered} className="object-cover w-full h-full" />
-                </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-medium">{post.title.rendered}</h3>
-                <div className="mt-2" dangerouslySetInnerHTML={{__html: post.content.rendered }} />
+                  <h3 className="text-lg font-bold">{post.title.rendered}</h3>
                 </div>
             </Link>
           </div>
