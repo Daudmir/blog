@@ -7,7 +7,7 @@ function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("http://localhost/wordpress/wp-json/wp/v2/pages?slug=home");
+      const res = await fetch("http://blog.test/wp-json/wp/v2/pages?slug=home");
       const [page] = await res.json();
       setPageData(page);
     }
