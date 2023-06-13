@@ -4,10 +4,10 @@ import style from '../../styles/home.module.css'
 
 function Home() {
   const [pageData, setPageData] = useState(null);
-
+  
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("http://blog.test/wp-json/wp/v2/pages?slug=home");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_WP_API}/wp/v2/pages?slug=home`);
       const [page] = await res.json();
       setPageData(page);
     }
